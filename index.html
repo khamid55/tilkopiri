@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TilKo‘prigi – AI Konferensiya Tarjimoni</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- CHAP YUQORI: Faqat dumaloq profil rasm -->
+    <div class="profil-round">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyTTDr-b3Q1sQsRRcmzjq0PHdImZfTpyq5KBTB1YuUAhirr1OpeFVhd_Ll2nw7qzI2iSM-0Pwu6YxDNINKTpWGPYJr1tIBkEkKUIjXhLXDoQ&s=10" alt="Xamid">
+    </div>
+
+    <!-- O‘NG YUQORI: Bitta til tugmasi (pastga ochiladigan menyu) -->
+    <div class="til-dropdown">
+        <button id="til-tugma">UZ</button>
+        <div class="dropdown-menu">
+            <button onclick="ozgar('uz')">O‘zbekcha</button>
+            <button onclick="ozgar('ru')">Русский</button>
+            <button onclick="ozgar('en')">English</button>
+        </div>
+    </div>
+
+    <!-- MARKAZ: Asosiy kontent -->
+    <div class="container">
+        <h1>TilKo‘prigi</h1>
+        <p id="matn">Har qanday konferensiyada real-time AI tarjima</p>
+
+        <!-- Yozish maydoni + ichida mikrofon -->
+        <div class="input-area">
+            <div class="input-box">
+                <textarea id="kirish-matn" placeholder="Yozing yoki ovoz bilan gapiring..." rows="3"></textarea>
+                <button id="mikrofon" onclick="ovozBoshla()">Mikrofon</button>
+            </div>
+
+            <!-- Bitta asosiy tugma -->
+            <button id="tugma" onclick="tarjimaQil()">Tarjima qilish</button>
+        </div>
+
+        <!-- Tarjima natijasi -->
+        <div id="tarjima-natija"></div>
+    </div>
+
+    <!-- Confetti kutubxonasi -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
